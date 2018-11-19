@@ -1,7 +1,7 @@
 module.exports = {
     apps : [{
       name: 'API',
-      script: 'app.js',
+      script: './bin/www',
   
       // Options reference: https://pm2.io/doc/en/runtime/reference/ecosystem-file/
       args: 'one two',
@@ -22,8 +22,8 @@ module.exports = {
         user : 'root',
         host : '111.230.236.23',
         ref  : 'origin/master',
-        repo : 'https://git.coding.net/WWW826887204/pm2_test.git',
-        path : '/myweb/pm2',
+        repo : 'https://github.com/janninaweigal/iBlog.git',
+        path : '/bingo',
         'post-deploy' : 'npm install && pm2 reload ecosystem.config.js --env production'
       }
     }
