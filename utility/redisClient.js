@@ -5,6 +5,12 @@ var redisEnable = config.redis.enable;
 if (redisEnable) {
     // use custom redis url or localhost
     var client = redis.createClient(config.redis.port || 6379, config.redis.host || 'localhost');
+    client.auth('jannineweigel@@', function (err) {
+        console.log('通过认证');
+    });
+    client.select(3, function() {
+        console.log('选中第一个缓存库');
+    });
     client.on('error', function (err) {
         console.error('Redis连接错误: ' + err);
         process.exit(1);
