@@ -4,7 +4,7 @@
 		"key": "/iBlog2/ssl/iblog2.key",
 		"cert": "/iBlog2/ssl/iblog2.crt"
 	},
-	"mongoUrl": "mongodb://root2:826887204www@localhost:27012/iBlog2?authSource=admin",
+	"mongoUrl": "mongodb://root:826887204www@localhost:27012/iBlog2?authSource=admin",
 	"redis": {
 		"enable": true,
 		"host": "127.0.0.1",
