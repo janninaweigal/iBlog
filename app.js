@@ -68,7 +68,7 @@ app.use(session({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-
+console.log(path.join(__dirname, 'node_modules'))
 // 静态文件
 app.use('/static', express.static(path.join(__dirname, 'public')));
 app.use('/static', express.static(path.join(__dirname, 'node_modules')));
